@@ -1,27 +1,36 @@
-# ReqresApiTest
+#Тестовое задание - работа с reqres.in API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+Проект был создан на [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 
-## Development server
+[ДЕМО - reqres-api-test](https://voodo13.github.io/reqres-api-test/)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Запуск приложения
 
-## Code scaffolding
+Скачать zip архив с репозитория GitHub и распаковать, либо выполнить в консоли:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+git clone https://github.com/Voodo13/reqres-api-test.git
+cd reqres-api-test
+```
 
-## Build
+Находясь внутри папки с проектом, установить зависимости
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+npm install
+```
 
-## Running unit tests
+### Запуск проекта в режиме разработки
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm run dev
+```
 
-## Running end-to-end tests
+Далее перейти по ссылке [http://localhost:4200/](http://localhost:4200/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Сборка проекта
 
-## Further help
+```
+npm run build
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Проект будет собран в /dist
