@@ -1,0 +1,19 @@
+<div class="login-form" >
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <label for="email">
+            <p>Введите email:</p>
+            <input type="email" name="email" id="email" formControlName="email">
+        </label>
+        <label for="password">
+            <p>Введите пароль:</p>
+            <input type="password" name="password" id="password" formControlName="password">
+        </label>
+        <div class="login-form__submit">
+            <input class="btn" type="submit" value="войти">
+        </div>
+        <label>дла входа использовать
+            <p>{{'Login: eve.holt@reqres.in'}}</p>
+            <p>Password: cityslicka</p>
+        </label>
+    </form>
+</div>

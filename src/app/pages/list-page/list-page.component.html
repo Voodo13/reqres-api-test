@@ -1,0 +1,14 @@
+@if (resourceList$ | async; as list) {
+    <div class="resource-cards">
+        @for (resource of list.data; track resource.id) {
+            <app-resource-card [resource]="resource" />
+        } @empty {
+            <li>There are no items.</li>
+        }
+    </div>
+    <tui-pagination
+        [index]="pageIndex"
+        [length]="list.total_pages"
+        (indexChange)="goToPage($event)"
+    />
+}

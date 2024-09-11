@@ -1,0 +1,12 @@
+<div class="toolbar">
+  <tui-segmented>
+    <a [routerLink]="['/']" routerLinkActive [routerLinkActiveOptions]="options">главная</a>
+    <a [routerLink]="['/users']" routerLinkActive [routerLinkActiveOptions]="options">пользователи</a>
+    @if (isAuth) {
+      <button [routerLink]="['/login']" (click)="onLogout()">выйти</button>
+    } @else {
+      <a [routerLink]="['/login']" routerLinkActive [routerLinkActiveOptions]="options">войти</a>
+    }
+  </tui-segmented>
+</div>
+
