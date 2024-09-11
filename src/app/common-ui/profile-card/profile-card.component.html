@@ -1,0 +1,28 @@
+@if (profile) {
+    <div
+        tuiSurface="elevated"
+        tuiBlockDetails
+        class="profile-card"
+    >
+        <tui-avatar
+            [src]="profile.avatar"
+            [size]="isMobile ? 'xl' : 'xxl'"
+        />
+        <h2 tuiTitle>
+            <a [routerLink]="['/user', profile.id]">
+                {{profile.first_name}} {{profile.last_name}}
+            </a>
+            <span tuiSubtitle>{{profile.email}}</span>
+        </h2>
+        @if(!!onDelete) {
+            <button
+                class="profile-card__close-btn"
+                tuiButtonClose
+                tuiIconButton
+                (click)="onDelete()"
+            >
+                Delete
+            </button>
+        }
+    </div>
+}

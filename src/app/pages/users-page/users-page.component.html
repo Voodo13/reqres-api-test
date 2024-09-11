@@ -1,0 +1,13 @@
+<div class="profile-cards__wrapper">
+  @for (profile of profiles(); track profile.id) {
+    <app-profile-card
+    [profile] = "profile"
+    [onDelete] = "deleteUser(profile.id)"
+    ></app-profile-card>
+  }
+</div>
+<tui-pagination
+  [index]="pageIndex()"
+  [length]="pager.total_pages"
+  (indexChange)="goToPage($event)"
+/>

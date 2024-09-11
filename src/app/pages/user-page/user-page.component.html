@@ -1,0 +1,37 @@
+<div class="profile-page">
+    @if (!!profile()) {
+        <app-profile-card
+            [profile] = "profile()"
+        ></app-profile-card> 
+    }
+    @if(!isRedacted()) {
+        <button 
+            size="m"
+            tuiButton
+            (click)="openRedactor()"
+        >редактировать
+        </button>
+    } @else {
+        <div class="update-form" >
+            <form [formGroup]="form" (ngSubmit)="onUpdate()">
+                <label for="email">
+                    <p>Имя:</p>
+                    <input type="text" name="first_name" id="first_name" formControlName="first_name">
+                </label>
+                <label for="password">
+                    <p>Фамилия</p>
+                    <input type="text" name="last_name" id="last_name" formControlName="last_name">
+                </label>
+                <label for="password">
+                    <p>Email</p>
+                    <input type="email" name="email" id="email" formControlName="email">
+                </label>
+                <div class="update-form__submit">
+                    <button class="btn" type="submit" value="Обновить" size="m" tuiButton>Обновить</button>
+                    <button class="btn" type="reset" value="Обновить" size="m" tuiButton (click)="closeRedactor()">Отмена</button>
+                </div>
+            </form>
+        </div>
+    } 
+</div>
+
