@@ -1,4 +1,4 @@
-#Тестовое задание - работа с reqres.in API
+# Тестовое задание - работа с reqres.in API
 
 Проект был создан на [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 
