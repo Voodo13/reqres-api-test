@@ -22,7 +22,7 @@ npm install
 ### Запуск проекта в режиме разработки
 
 ```
-npm run dev
+npm start
 ```
 
 Далее перейти по ссылке [http://localhost:4200/](http://localhost:4200/)
